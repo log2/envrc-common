@@ -2,9 +2,9 @@
 
 if [ -z "${local_SNAPSHOT}" ]; then
     # shellcheck disable=SC2148 source=/.envrc-aws-sso-access.sh
-    source_url "https://raw.githubusercontent.com/log2/envrc-common/v0.1.0/.envrc-aws-sso-access.sh" "sha256-82q5C4E6IFE0dUmo6Xe6x1iFWRg87bYibv0vjjVT6jg="
+    source_url "https://raw.githubusercontent.com/log2/envrc-common/v0.1.1/.envrc-aws-sso-access.sh" "sha256-LnPM4LWesi7V__AqpWQlfVr6t3KhgyQR6XqlF5vb10Y="
     # shellcheck disable=SC2148 source=/.envrc-aws-common.sh
-    source_url "https://raw.githubusercontent.com/log2/envrc-common/v0.1.0/.envrc-aws-common.sh" "sha256-TOV81BcrzCNX3PgfLHSKsOtBMm0vKZF7npSD_ks1t_Y="
+    source_url "https://raw.githubusercontent.com/log2/envrc-common/v0.1.1/.envrc-aws-common.sh" "sha256-bw+xPqZtK3ZoLVKNovtisYoqhXGRa94cmuI4GfQsCjg="
 else
     # shellcheck disable=SC1091
     source "${local_SNAPSHOT}"/.envrc-aws-sso-access.sh

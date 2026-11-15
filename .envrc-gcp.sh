@@ -2,7 +2,7 @@
 
 if [ -z "${local_SNAPSHOT}" ]; then
     # shellcheck disable=SC2148 source=/.envrc-clusters.sh
-    source_url "https://raw.githubusercontent.com/log2/envrc-common/v0.1.0/.envrc-clusters.sh" "sha256-ryUDAECvkGAm8X+xea3MpUs916FGlauFdZOBWLCYBuc="
+    source_url "https://raw.githubusercontent.com/log2/envrc-common/v0.1.1/.envrc-clusters.sh" "sha256-HwUZcFRYSOan410e0EDyOUP5k6_sbOCp6SnEZAgLOSY="
 else
     # shellcheck disable=SC1091
     source "${local_SNAPSHOT}"/.envrc-clusters.sh
