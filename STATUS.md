@@ -1,4 +1,4 @@
-# envrc-framework — status
+# envrc-common — status
 
 ## Health: functional, some drift
 
@@ -8,9 +8,8 @@
 
 ## Known issues
 
-- `_bootstrap.sh` still references `log2/dep-bootstrap` as the upstream URL — this is the original external dep, not a personal fork. Will break if log2 removes the repo.
-- `_bootstrap.sh` also pins `log2/k8s-common:0.2.27` — external dependency. Same risk.
-- Long-term goal: replace these external references with `log2/` equivalents
+- `_bootstrap.sh` pins only `log2/` repos: `dep-common v0.1.0`, `shell-common:v0.1.1`, `k8s-common:v0.1.0` (no external dependencies left)
+- Each `.envrc-*.sh` hard-codes the release tag (currently `v0.1.1`) and a sha256 per `source_url`: bump them together on release
 
 ## Tech debt
 
