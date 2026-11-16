@@ -22,8 +22,10 @@ for file in *.sh .*.sh; do
 done
 
 echo "Clearing SHAs on all *.sh and .*.sh files"
-for targetFile in *.sh .*.sh; do
-    sed "${sedi[@]}" -e "s#\(\"https://raw.githubusercontent.com/${orgName}/${repoName}/${version}/${file}\"\) \"sha256.*\"#\1 \"sha256-EMPTY\"#g" "${targetFile}"
+for file in *.sh .*.sh; do
+    while IFS= read -r targetFile; do
+        sed "${sedi[@]}" -e "s#\(\"https://raw.githubusercontent.com/${orgName}/${repoName}/${version}/${file}\"\) \"sha256.*\"#\1 \"sha256-EMPTY\"#g" "${targetFile}"
+    done < <(grep -l "$file" ./*.sh ./.*.sh 2>/dev/null)
 done
 
 echo "Searching for stable SHAs on all *.sh and .*.sh files"
