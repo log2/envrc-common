@@ -1,4 +1,4 @@
-# envrc-framework — development guide
+# envrc-common — development guide
 
 ## Purpose
 
@@ -30,7 +30,7 @@ source_url "https://raw.githubusercontent.com/log2/envrc-common/v0.x.y/.envrc-cl
 
 For local development, set `local_SNAPSHOT` to bypass the URL:
 ```bash
-export local_SNAPSHOT="/path/to/local/envrc-framework"
+export local_SNAPSHOT="/path/to/local/envrc-common"
 ```
 Each `.sh` file checks `${local_SNAPSHOT}` and sources the local copy instead.
 
