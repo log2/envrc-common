@@ -8,8 +8,8 @@
 
 ## Known issues
 
-- `_bootstrap.sh` pins only `log2/` repos: `dep-common v0.1.0`, `shell-common:v0.1.1`, `k8s-common:v0.1.0` (no external dependencies left)
-- Each `.envrc-*.sh` hard-codes the release tag (currently `v0.1.1`) and a sha256 per `source_url`: bump them together on release
+- `_bootstrap.sh` pins only `log2/` repos: `dep-common v0.1.1`, `shell-common:v0.1.1`, `k8s-common:v0.1.1` (no external dependencies left)
+- Each `.envrc-*.sh` hard-codes the release tag (currently `v0.1.2`) and a sha256 per `source_url`: bump them together on release
 
 ## Tech debt
 

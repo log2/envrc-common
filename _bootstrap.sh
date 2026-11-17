@@ -3,11 +3,11 @@
 export _DEP_VERBOSENESS_LEVEL=0
 
 # shellcheck disable=SC1090,SC1091 # dynamic URL source via fetchurl, path not statically resolvable
-. "$(fetchurl "https://raw.githubusercontent.com/log2/dep-common/v0.1.0/dep-bootstrap.sh" "sha256-Mw+nhqI4qwBBwfNv3d9AdMLNhwWhwgiKx4rygEeqE1E=")" v0.1.0
+. "$(fetchurl "https://raw.githubusercontent.com/log2/dep-common/v0.1.1/dep-bootstrap.sh" "sha256-GyO5uIWG4UpCfp0NiJ_mV4NQVZmyYwTiI2QDhkaizHg=")" v0.1.1
 
 if [ -z "${local_SNAPSHOT}" ]; then
     dep define "log2/shell-common:v0.1.1"
-    dep define "log2/k8s-common:v0.1.0"
+    dep define "log2/k8s-common:v0.1.1"
 else
     dep define "log2/shell-common:local-SNAPSHOT"
     dep define "log2/k8s-common:local-SNAPSHOT"
